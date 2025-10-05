@@ -1,0 +1,7 @@
+[project]
+name = "relay-revenue"
+version = "0.1.0"
+requires-python = ">=3.11,<3.12"
+
+[tool.pip]
+use-pep517 = true
