@@ -1,9 +1,10 @@
 {
   "builds": [
-    { "src": "api/index.py", "use": "@vercel/python", "config": { "pythonVersion": "3.11" } }
+    { "src": "api/index.py", "use": "@vercel/python", "config": { "pythonVersion": "3.11" } },
+    { "src": "index.html", "use": "@vercel/static" }
   ],
-  "rewrites": [
-    { "source": "/api/(.*)", "destination": "/api/index.py" },
-    { "source": "/(.*)", "destination": "/index.html" }
+  "routes": [
+    { "src": "/api/(.*)", "dest": "/api/index.py" },
+    { "src": "/(.*)", "dest": "/index.html" }
   ]
 }
